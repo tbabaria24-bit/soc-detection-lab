@@ -1,0 +1,24 @@
+id: win_scheduled_task_created
+title: Scheduled task created
+description: >
+  A scheduled task was registered (event 4698). Attackers use tasks to rerun
+  their tools at logon or on a timer.
+severity: medium
+logsource: windows
+mitre:
+  tactic: Persistence
+  technique_id: T1053.005
+  technique: "Scheduled Task/Job: Scheduled Task"
+detection:
+  type: match
+  selection:
+    event_id: 4698
+  filter:
+    # Tuning: Windows itself (SYSTEM) registers built-in tasks such as defrag.
+    subjectusername: SYSTEM
+false_positives:
+  - Software installers and updates create tasks often; check the task's command.
+  - Tasks created by SYSTEM are filtered out; an attacker already running as SYSTEM would be missed.
+response:
+  - Review the task's action (what it runs) and who created it.
+  - Delete the task if it is malicious and remove the file it runs.

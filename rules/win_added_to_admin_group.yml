@@ -1,0 +1,18 @@
+id: win_added_to_admin_group
+title: Account added to an administrators group
+description: >
+  An account was added to a privileged group (event 4732), giving it admin rights.
+severity: high
+logsource: windows
+mitre:
+  tactic: Persistence
+  technique_id: T1098
+  technique: Account Manipulation
+detection:
+  type: match
+  selection:
+    event_id: 4732
+    group_name|re: "(?i)^(administrators|domain admins|enterprise admins|remote desktop users)$"
+response:
+  - Verify the change against an approved request.
+  - If unapproved, remove the member and disable the account.

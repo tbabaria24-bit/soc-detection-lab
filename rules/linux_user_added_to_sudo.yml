@@ -1,0 +1,18 @@
+id: linux_user_added_to_sudo
+title: User added to Linux admin group
+description: >
+  An account was added to a group that grants root access (sudo, wheel, admin).
+severity: high
+logsource: linux
+mitre:
+  tactic: Persistence
+  technique_id: T1098
+  technique: Account Manipulation
+detection:
+  type: match
+  selection:
+    action: member_added_to_group
+    group_name: [sudo, wheel, admin, root]
+response:
+  - Verify the change was approved.
+  - If not, remove the user from the group and lock the account.

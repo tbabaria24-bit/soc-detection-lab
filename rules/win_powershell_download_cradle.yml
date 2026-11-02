@@ -1,0 +1,20 @@
+id: win_powershell_download_cradle
+title: PowerShell download and execute
+description: >
+  PowerShell downloaded content from the internet and ran it in memory
+  (IEX + DownloadString), a common way to load attack tools without saving files.
+severity: high
+logsource: windows
+mitre:
+  tactic: Command and Control
+  technique_id: T1105
+  technique: Ingress Tool Transfer
+detection:
+  type: match
+  selection:
+    event_id: 4688
+    command_line|re: "(?i)(iex|invoke-expression).*(downloadstring|net\\.webclient|invoke-webrequest|iwr\\s)"
+response:
+  - Find the URL in the command line and block that domain or IP.
+  - Retrieve what was downloaded (proxy logs, EDR) to understand the tool.
+  - Isolate the host.

@@ -1,0 +1,23 @@
+id: win_encoded_powershell
+title: Encoded PowerShell command
+description: >
+  PowerShell was started with an encoded (Base64) command. Admins rarely do this;
+  attackers use it to hide what the command does.
+severity: high
+logsource: windows
+mitre:
+  tactic: Execution
+  technique_id: T1059.001
+  technique: "Command and Scripting Interpreter: PowerShell"
+detection:
+  type: match
+  selection:
+    event_id: 4688
+    newprocessname|re: "(?i)\\\\(powershell|pwsh)\\.exe$"
+    command_line|re: "(?i)\\s-e(nc(odedcommand)?|c)?\\s+[A-Za-z0-9+/=]{16,}"
+false_positives:
+  - Some management tools (SCCM, Intune scripts) use encoded commands.
+response:
+  - Decode the Base64 (UTF-16LE) to see the real command.
+  - Look at the parent process and the account that ran it.
+  - Check for network connections or new files right after.

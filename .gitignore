@@ -1,0 +1,18 @@
+# Generated reports (a sample is kept in docs/sample-report/)
+reports/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Never commit real logs or secrets
+*.evtx
+.env
+real_logs/
+
+# OS / editor
+.DS_Store
+.vscode/

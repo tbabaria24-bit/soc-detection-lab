@@ -1,0 +1,26 @@
+id: linux_ssh_login_after_bruteforce
+title: Successful SSH login after brute force
+description: >
+  An IP that was brute-forcing SSH then logged in successfully. The password was
+  probably guessed and the attacker now has a shell on the server.
+severity: critical
+logsource: linux
+mitre:
+  tactic: Initial Access
+  technique_id: T1078
+  technique: Valid Accounts
+detection:
+  type: sequence
+  selection:
+    action: ssh_failed
+  threshold:
+    group_by: [src_ip]
+    count: 5
+    window_seconds: 300
+  followed_by:
+    action: ssh_success
+  followed_within_seconds: 900
+response:
+  - Treat the host as compromised. Isolate it from the network if possible.
+  - Disable the account that logged in and reset its password.
+  - Review everything that account did after login (sudo, new users, cron jobs, downloads).

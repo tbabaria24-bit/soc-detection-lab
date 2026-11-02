@@ -1,0 +1,18 @@
+id: win_run_key_persistence
+title: Registry Run key added
+description: >
+  A program was added to a Registry Run key, so it starts every time the user logs on.
+severity: high
+logsource: windows
+mitre:
+  tactic: Persistence
+  technique_id: T1547.001
+  technique: "Boot or Logon Autostart Execution: Registry Run Keys"
+detection:
+  type: match
+  selection:
+    event_id: 4688
+    command_line|re: "(?i)reg(\\.exe)?\\s+add\\s+.*\\\\currentversion\\\\run"
+response:
+  - Check the value's target file; remove the Run value and the file if malicious.
+  - Look for the same value on other hosts.

@@ -1,0 +1,91 @@
+{
+  "name": "SOC Detection Lab - detected techniques",
+  "versions": {
+    "layer": "4.5",
+    "navigator": "5.1.0",
+    "attack": "16"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques detected by SOC Detection Lab. Score = number of alerts.",
+  "techniques": [
+    {
+      "techniqueID": "T1053.005",
+      "score": 1,
+      "comment": "Scheduled task created",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1059.001",
+      "score": 1,
+      "comment": "Encoded PowerShell command",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1070.001",
+      "score": 1,
+      "comment": "Security event log cleared",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1078",
+      "score": 2,
+      "comment": "Successful SSH login after brute force; Successful Windows logon after brute force",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1098",
+      "score": 2,
+      "comment": "Account added to an administrators group; User added to Linux admin group",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1105",
+      "score": 1,
+      "comment": "PowerShell download and execute",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1110.001",
+      "score": 2,
+      "comment": "SSH brute-force attack; Windows logon brute force",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1136.001",
+      "score": 2,
+      "comment": "New Linux user account created; New Windows user account created",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1190",
+      "score": 3,
+      "comment": "SQL injection attempt in URL",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1547.001",
+      "score": 1,
+      "comment": "Registry Run key added",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1595.003",
+      "score": 1,
+      "comment": "Web directory scanning (burst of 404s)",
+      "enabled": true
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffe8a3",
+      "#ff6b6b"
+    ],
+    "minValue": 0,
+    "maxValue": 3
+  },
+  "layout": {
+    "layout": "side",
+    "showName": true
+  },
+  "hideDisabled": false
+}

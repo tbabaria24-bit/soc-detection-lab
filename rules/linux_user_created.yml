@@ -1,0 +1,20 @@
+id: linux_user_created
+title: New Linux user account created
+description: >
+  A local user account was created. Attackers add accounts to keep access even
+  if the original password is changed.
+severity: medium
+logsource: linux
+mitre:
+  tactic: Persistence
+  technique_id: T1136.001
+  technique: "Create Account: Local Account"
+detection:
+  type: match
+  selection:
+    action: user_created
+false_positives:
+  - Normal account provisioning by an administrator; confirm against a change ticket.
+response:
+  - Confirm with the system owner that the account was expected.
+  - If not, lock the account (usermod -L) and investigate who created it.

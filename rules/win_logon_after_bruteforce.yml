@@ -1,0 +1,26 @@
+id: win_logon_after_bruteforce
+title: Successful Windows logon after brute force
+description: >
+  An IP that was guessing passwords then logged on successfully (event 4624).
+  The attacker likely has valid credentials.
+severity: critical
+logsource: windows
+mitre:
+  tactic: Initial Access
+  technique_id: T1078
+  technique: Valid Accounts
+detection:
+  type: sequence
+  selection:
+    event_id: 4625
+  threshold:
+    group_by: [src_ip]
+    count: 5
+    window_seconds: 300
+  followed_by:
+    event_id: 4624
+  followed_within_seconds: 900
+response:
+  - Disable the compromised account and reset its password.
+  - Isolate the host and review processes started after the logon (4688).
+  - Check other hosts for logons by the same account or IP.

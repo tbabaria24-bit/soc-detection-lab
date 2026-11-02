@@ -1,0 +1,26 @@
+id: web_scanning_404_burst
+title: Web directory scanning (burst of 404s)
+description: >
+  One IP requested many pages that do not exist in a short time. This is typical
+  of automated tools (gobuster, dirb, Nikto) hunting for admin panels, backups and
+  config files before an attack.
+severity: medium
+logsource: web
+mitre:
+  tactic: Reconnaissance
+  technique_id: T1595.003
+  technique: "Active Scanning: Wordlist Scanning"
+detection:
+  type: threshold
+  selection:
+    status: 404
+  threshold:
+    group_by: [src_ip]
+    count: 20
+    window_seconds: 60
+false_positives:
+  - A broken link on a busy page can cause many 404s, but from many IPs, not one.
+response:
+  - Check what else this IP did (SQL injection attempts, logins) in the same window.
+  - Block the IP at the firewall or WAF if it is not a known scanner you authorized.
+  - Review which paths returned 200 to the same IP; those are what the attacker found.

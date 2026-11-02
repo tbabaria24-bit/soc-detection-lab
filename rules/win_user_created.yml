@@ -1,0 +1,20 @@
+id: win_user_created
+title: New Windows user account created
+description: >
+  A user account was created (event 4720). Attackers create accounts to keep
+  access to a system.
+severity: medium
+logsource: windows
+mitre:
+  tactic: Persistence
+  technique_id: T1136.001
+  technique: "Create Account: Local Account"
+detection:
+  type: match
+  selection:
+    event_id: 4720
+false_positives:
+  - Normal onboarding by the IT team; confirm against a ticket.
+response:
+  - Confirm the account was expected and who created it (SubjectUserName).
+  - If not, disable it and investigate the creating account.

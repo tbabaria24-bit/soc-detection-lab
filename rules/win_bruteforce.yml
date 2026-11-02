@@ -1,0 +1,25 @@
+id: win_bruteforce
+title: Windows logon brute force
+description: >
+  Many failed logons (event 4625) from one IP within a few minutes, a sign of
+  password guessing against RDP or SMB.
+severity: high
+logsource: windows
+mitre:
+  tactic: Credential Access
+  technique_id: T1110.001
+  technique: "Brute Force: Password Guessing"
+detection:
+  type: threshold
+  selection:
+    event_id: 4625
+  threshold:
+    group_by: [src_ip]
+    count: 5
+    window_seconds: 300
+false_positives:
+  - A service or mapped drive using an expired password.
+response:
+  - Check for a successful logon (4624) from the same IP afterwards.
+  - Block the IP; RDP should never be exposed directly to the internet.
+  - Confirm account lockout policy is enabled.

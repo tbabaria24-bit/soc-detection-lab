@@ -1,0 +1,21 @@
+id: web_sqli_attempt
+title: SQL injection attempt in URL
+description: >
+  A request contained SQL syntax (UNION SELECT, OR 1=1, SLEEP) in its URL. Attackers
+  use this to read or change the database behind a website.
+severity: high
+logsource: web
+mitre:
+  tactic: Initial Access
+  technique_id: T1190
+  technique: Exploit Public-Facing Application
+detection:
+  type: match
+  selection:
+    decoded_path|re: "(?i)(union\\s+(all\\s+)?select|'\\s*or\\s*'?\\d+'?\\s*=\\s*'?\\d+|sleep\\(\\d+\\)|information_schema|--\\s*$)"
+false_positives:
+  - Security scans you scheduled yourself.
+response:
+  - Check the HTTP status and response size; a 200 with a large response may mean the injection worked.
+  - Review the application's database logs for queries at the same time.
+  - Block the source IP and confirm the vulnerable parameter uses parameterized queries.

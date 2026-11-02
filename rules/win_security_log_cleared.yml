@@ -1,0 +1,19 @@
+id: win_security_log_cleared
+title: Security event log cleared
+description: >
+  Someone cleared the Windows Security log with wevtutil. Attackers do this to
+  erase evidence of what they did.
+severity: high
+logsource: windows
+mitre:
+  tactic: Defense Evasion
+  technique_id: T1070.001
+  technique: "Indicator Removal: Clear Windows Event Logs"
+detection:
+  type: match
+  selection:
+    event_id: 4688
+    command_line|re: "(?i)wevtutil(\\.exe)?\\s+(cl|clear-log)\\s+security"
+response:
+  - Assume the attacker had admin rights; escalate the incident.
+  - Recover logs from a central SIEM or log forwarder, which the attacker could not clear.

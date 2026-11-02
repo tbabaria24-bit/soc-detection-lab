@@ -1,0 +1,25 @@
+id: linux_ssh_bruteforce
+title: SSH brute-force attack
+description: >
+  Many failed SSH password attempts from one IP within a few minutes, usually an
+  automated tool guessing common usernames and passwords.
+severity: high
+logsource: linux
+mitre:
+  tactic: Credential Access
+  technique_id: T1110.001
+  technique: "Brute Force: Password Guessing"
+detection:
+  type: threshold
+  selection:
+    action: ssh_failed
+  threshold:
+    group_by: [src_ip]
+    count: 5
+    window_seconds: 300
+false_positives:
+  - A user or script with a saved wrong password retrying in a loop.
+response:
+  - Check whether the same IP later logged in successfully (see the follow-up rule).
+  - Block the IP (fail2ban, firewall) and disable SSH password login in favor of keys.
+  - Confirm the targeted accounts have strong passwords.
